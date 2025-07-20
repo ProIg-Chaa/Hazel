@@ -1,7 +1,6 @@
 #pragma once
 #include "Events.h"
 
-#include <sstream>
 
 namespace Hazel {
 	class HAZEL_API WindowResizeEvent :public Event
@@ -18,7 +17,7 @@ namespace Hazel {
 		std::string ToString() const override 
 		{
 			std::stringstream ss;
-			ss << "MouseButtonPressedEvent:" << m_Width << "," << m_Height;
+			ss << "WindowResizeEvent:" << m_Width << "," << m_Height;
 			return ss.str();
 		}
 		EVENT_CLASS_TYPE(WindowResize) 

@@ -1,9 +1,8 @@
 #pragma once
-
+#include "hzpch.h"
 #include  "Hazel/Core.h"
 
-#include <string>
-#include <functional>
+
 
 namespace Hazel {
 	enum class EventType
@@ -69,7 +68,8 @@ namespace Hazel {
 		}
 
 	};
-	inline std::ostream& operator<<(std::ostream& os, const Event& e) {
+	inline std::ostream& operator<<(std::ostream& os, const Event& e)
+	{
 		return os << e.ToString();
 	}
 }
